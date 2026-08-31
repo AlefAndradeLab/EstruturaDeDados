@@ -1,4 +1,4 @@
-package sprint01;
+package kernel.sprint.sprint01;
 /**
  * Vetor dinâmico implementado manualmente.
  *

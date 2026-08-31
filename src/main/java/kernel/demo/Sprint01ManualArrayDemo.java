@@ -1,6 +1,6 @@
 package kernel.demo;
 
-import sprint01.ManualArray;
+import kernel.sprint.sprint01.ManualArray;
 
 public final class Sprint01ManualArrayDemo {
     private Sprint01ManualArrayDemo() {
@@ -18,9 +18,9 @@ public final class Sprint01ManualArrayDemo {
 
         processo.add("005");
 
-        System.out.println ("========= PROCESSOS =========");
+        System.out.println ("========= MANUAL ARRAY =========");
         System.out.println ("Tamanho atual: " + processo.size());
-        System.out.println ("Tabela de frutas (indice -> nome)");
+        System.out.println ("Gerenciador de processos (indice -> nome)");
         System.out.println ("--------------------------------");
 
         for (int i = 0; i < processo.size(); i++) {
