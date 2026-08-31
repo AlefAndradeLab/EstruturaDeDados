@@ -27,6 +27,7 @@ public final class Sprint01ManualArrayDemo {
             System.out.printf ("[%d] -> %s%n", i, processo.get(i));
         }
 
+        
         System.out.println ("--------------------------------");
         System.out.println ("indice 0: " + processo.get(0));
         System.out.println ("indice 2: " + processo.get(2));
@@ -37,7 +38,19 @@ public final class Sprint01ManualArrayDemo {
         System.out.println ("Removido em indice 3: " + removido);
         System.out.println ("Tamanho apos remocao: " + processo.size());
         
-        System.out.println ("Tabela final apos compactacao: ");
+        System.out.println ("Tabela apos compactacao: ");
+
+        for (int i = 0; i < processo.size(); i++) {
+            System.out.printf ("[%d] -> %s%n", i, processo.get(i));
+        }
+
+        processo.add("006");
+        processo.add("007");
+        processo.add("008");
+
+        System.out.println ("--------------------------------");
+        System.out.println("Tamanho após redimensionamento: " + processo.size());
+        System.out.println("Tabela após redimensionamento: ");
 
         for (int i = 0; i < processo.size(); i++) {
             System.out.printf ("[%d] -> %s%n", i, processo.get(i));
