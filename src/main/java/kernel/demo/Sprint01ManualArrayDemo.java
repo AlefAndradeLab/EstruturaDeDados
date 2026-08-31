@@ -8,43 +8,41 @@ public final class Sprint01ManualArrayDemo {
     }
 
     public static void main(String[] args) {
-        ManualArray<String> frutas = new ManualArray<>(5);
+        ManualArray<String> processo = new ManualArray<>(5);
 
-        frutas.add("Maca");
-        frutas.add("Banana");
-        frutas.add("Laranja");
+        processo.add("001");
+        processo.add("002");
+        processo.add("003");
 
-        frutas.insertAt(1, "Morango");
+        processo.insertAt(1, "004");
 
-        frutas.add("Uva");
+        processo.add("005");
 
-        System.out.println ("== EXEMPLO GENERICO - MANUAL ARRAY ===");
-        System.out.println ("Tamanho atual: " + frutas.size());
+        System.out.println ("========= PROCESSOS =========");
+        System.out.println ("Tamanho atual: " + processo.size());
         System.out.println ("Tabela de frutas (indice -> nome)");
         System.out.println ("--------------------------------");
 
-        for (int i = 0; i < frutas.size(); i++) {
-            System.out.printf ("[%d] -> %s%n", i, frutas.get(i));
+        for (int i = 0; i < processo.size(); i++) {
+            System.out.printf ("[%d] -> %s%n", i, processo.get(i));
         }
 
         System.out.println ("--------------------------------");
-        System.out.println ("indice 0: " + frutas.get(0));
-        System.out.println ("indice 2: " + frutas.get(2));
-        System.out.println ("indice 4: " + frutas.get(4));
+        System.out.println ("indice 0: " + processo.get(0));
+        System.out.println ("indice 2: " + processo.get(2));
+        System.out.println ("indice 4: " + processo.get(4));
         System.out.println ("--------------------------------");
 
-        String removido = frutas.removeAt(3);
+        String removido = processo.removeAt(3);
         System.out.println ("Removido em indice 3: " + removido);
-        System.out.println ("Tamanho apos remocao: " +frutas.size());
+        System.out.println ("Tamanho apos remocao: " + processo.size());
         
         System.out.println ("Tabela final apos compactacao: ");
 
-        for (int i = 0; i < frutas.size(); i++) {
-            System.out.printf ("[%d] -> %s%n", i, frutas.get(i));
+        for (int i = 0; i < processo.size(); i++) {
+            System.out.printf ("[%d] -> %s%n", i, processo.get(i));
         }
 
         System.out.println ("--------------------------------");
-        System.out.println ("DICA DA SPRINT: Como voce adaptaria esse codigo para armazenar 'Processos' no lugar de frutas?");
-
     }
 }
