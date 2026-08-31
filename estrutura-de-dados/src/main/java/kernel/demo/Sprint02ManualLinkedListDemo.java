@@ -1,6 +1,5 @@
 package kernel.demo;
 
-import kernel.sprint.sprint02.ManualLinkedList;
 
 /**
  * Demo de referencia para a Sprint 02 (Sprint02ManualLinkedList).
@@ -13,7 +12,7 @@ public final class Sprint02ManualLinkedListDemo {
 
     public static void main(String[] args) {
         
-        ManualLinkedList<String> vagao = new ManualLinkedList<>();
+        Sprint02ManualLinkedList<String> vagao = new Sprint02ManualLinkedList<>();
 
         System.out.println("=== EXEMPLO GENERICO - LINKED LIST ===");
         

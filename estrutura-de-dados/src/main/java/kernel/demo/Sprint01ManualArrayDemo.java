@@ -1,6 +1,5 @@
 package kernel.demo;
 
-import sprint01.ManualArray;
 
 public final class Sprint01ManualArrayDemo {
     private Sprint01ManualArrayDemo() {

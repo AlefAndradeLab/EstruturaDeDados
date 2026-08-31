@@ -1,4 +1,4 @@
-package sprint02;
+package kernel.sprint.sprint02;
 
 /**
  * Lista duplamente encadeada manual.
