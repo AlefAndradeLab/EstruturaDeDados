@@ -20,24 +20,19 @@ public final class Sprint01ManualArrayDemo {
 
         System.out.println ("========= MANUAL ARRAY =========");
         System.out.println ("Tamanho atual: " + processo.size());
+        System.out.println ("Capacidade atual: " + processo.capacity());
         System.out.println ("Gerenciador de processos (indice -> nome)");
         System.out.println ("--------------------------------");
 
         for (int i = 0; i < processo.size(); i++) {
             System.out.printf ("[%d] -> %s%n", i, processo.get(i));
         }
-
         
         System.out.println ("--------------------------------");
-        System.out.println ("indice 0: " + processo.get(0));
-        System.out.println ("indice 2: " + processo.get(2));
-        System.out.println ("indice 4: " + processo.get(4));
-        System.out.println ("--------------------------------");
-
         String removido = processo.removeAt(3);
         System.out.println ("Removido em indice 3: " + removido);
         System.out.println ("Tamanho apos remocao: " + processo.size());
-        
+        System.out.println ("Capacidade após remoção: " + processo.capacity());
         System.out.println ("Tabela apos compactacao: ");
 
         for (int i = 0; i < processo.size(); i++) {
@@ -47,8 +42,11 @@ public final class Sprint01ManualArrayDemo {
         processo.add("006");
         processo.add("007");
         processo.add("008");
+        processo.add("009");
+        processo.add("010");
 
         System.out.println ("--------------------------------");
+        System.out.println("Capacidade após redimensionamento: " + processo.capacity());
         System.out.println("Tamanho após redimensionamento: " + processo.size());
         System.out.println("Tabela após redimensionamento: ");
 

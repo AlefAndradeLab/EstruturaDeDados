@@ -153,6 +153,15 @@ public final class ManualArray<T> {
     }
 
     /**
+     * Retorna a capacidade total do array.
+     * @return capacidade do array.
+     */
+
+    public int capacity() {
+        return data.length;
+    }
+
+    /**
      * Método interno para garantir que o array tenha a capacidade solicitada.
      * Se a capacidade atual for insuficiente, cria-se um novo array com o dobro do tamanho.
      * Custo: O(n) no momento da realocação, pois precisa copiar todos os N elementos antigos.
