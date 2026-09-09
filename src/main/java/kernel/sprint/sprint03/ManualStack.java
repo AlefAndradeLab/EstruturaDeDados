@@ -1,4 +1,6 @@
-package kernelmjr.manual;
+package kernel.sprint.sprint03;
+
+import kernel.sprint.sprint02.ManualLinkedList;
 
 /**
  * Pilha manual (LIFO - Last In, First Out) baseada em lista encadeada.
@@ -21,11 +23,11 @@ package kernelmjr.manual;
  * do SO ou tratamento de interrupcoes aninhadas. Uma Pilha garante que o ultimo processo
  * interrompido seja o primeiro a ser retomado.
  */
-public final class Sprint03ManualStack<T> {
+public final class ManualStack<T> {
     
     // Por debaixo dos panos, nossa Pilha usa a LinkedList que acabamos de criar.
     // Isso se chama "Composicao". Reaproveitamos a logica sem herdar.
-    private final Sprint02ManualLinkedList<T> list = new Sprint02ManualLinkedList<>();
+    private final ManualLinkedList<T> list = new ManualLinkedList<>();
 
     /**
      * Adiciona um elemento no topo da pilha (Push).

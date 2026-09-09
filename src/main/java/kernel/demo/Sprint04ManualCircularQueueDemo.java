@@ -1,6 +1,6 @@
-package kernelmjr.demo;
+package kernel.demo;
 
-import kernelmjr.manual.Sprint04ManualCircularQueue;
+import kernel.sprint.sprint04.ManualCircularQueue;
 
 /**
  * Demo de referencia para a Sprint 04 (Sprint04ManualCircularQueue).
@@ -13,7 +13,7 @@ public final class Sprint04ManualCircularQueueDemo {
 
     public static void main(String[] args) {
         
-        Sprint04ManualCircularQueue<String> catraca = new Sprint04ManualCircularQueue<>();
+        ManualCircularQueue<String> catraca = new ManualCircularQueue<>();
 
         System.out.println("=== EXEMPLO GENERICO - CIRCULAR QUEUE (FIFO) ===");
         

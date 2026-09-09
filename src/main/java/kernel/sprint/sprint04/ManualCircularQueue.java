@@ -1,4 +1,4 @@
-package kernelmjr.manual;
+package kernel.sprint.sprint04;
 
 /**
  * Fila circular encadeada manual (FIFO - First In, First Out).
@@ -20,7 +20,7 @@ package kernelmjr.manual;
  * ao primeiro, permitindo que processos voltem para o fim da fila rapidamente O(1) 
  * apos usarem sua fatia de tempo (quantum) da CPU.
  */
-public final class Sprint04ManualCircularQueue<T> {
+public final class ManualCircularQueue<T> {
     
     /**
      * Estrutura interna do No (Node). 

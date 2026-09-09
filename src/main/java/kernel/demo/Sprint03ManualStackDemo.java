@@ -1,6 +1,6 @@
-package kernelmjr.demo;
+package kernel.demo;
 
-import kernelmjr.manual.Sprint03ManualStack;
+import kernel.sprint.sprint03.ManualStack;
 
 /**
  * Demo de referencia para a Sprint 03 (Sprint03ManualStack).
@@ -13,7 +13,7 @@ public final class Sprint03ManualStackDemo {
 
     public static void main(String[] args) {
         
-        Sprint03ManualStack<String> historicoNav = new Sprint03ManualStack<>();
+        ManualStack<String> historicoNav = new ManualStack<>();
 
         System.out.println("=== EXEMPLO GENERICO - MANUAL STACK (LIFO) ===");
         
