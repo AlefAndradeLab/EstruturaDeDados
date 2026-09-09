@@ -1,1 +1,0 @@
-A estrutura da sprint 02 demonstra o funcionamento de uma lista duplamente encadeada. Duplamente encadeada pois cada elemento possui um next e um previous, que serião as referências do próximo elemento e do anterior.
