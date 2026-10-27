@@ -1,6 +1,6 @@
-package kernelmjr.demo;
+package kernel.demo;
 
-import kernelmjr.manual.Sprint07ManualBinarySearchTree;
+import kernel.sprint.sprint07.ManualBinarySearchTree;
 
 /**
  * Demo generica para a Sprint 07 (BST).
@@ -13,7 +13,7 @@ public final class Sprint07ManualBstDemo {
 
     public static void main(String[] args) {
         
-        Sprint07ManualBinarySearchTree bst = new Sprint07ManualBinarySearchTree();
+        ManualBinarySearchTree bst = new ManualBinarySearchTree();
 
         System.out.println("=== EXEMPLO GENERICO - ARVORE BINARIA DE BUSCA (BST) ===");
         

@@ -1,4 +1,7 @@
-package kernelmjr.manual;
+package kernel.sprint.sprint06;
+
+import kernel.sprint.sprint02.ManualLinkedList;
+import kernel.sprint.sprint10.EntryVisitor;
 
 /**
  * Tabela Hash manual (Mapa de Chave-Valor) usando Encadeamento Separado.
@@ -20,7 +23,7 @@ package kernelmjr.manual;
  * Demonstra a funcao de espalhamento (Hash) e como tratar Colisoes (quando duas 
  * chaves diferentes caem no mesmo indice) sem usar o java.util.HashMap.
  */
-public final class Sprint06ManualHashTable<K, V> {
+public final class ManualHashTable<K, V> {
     
     /**
      * Objeto simples (Tupla) que armazena a relacao Chave -> Valor.
@@ -41,14 +44,14 @@ public final class Sprint06ManualHashTable<K, V> {
     // O "vetor principal" da tabela. Em vez de armazenar o dado direto, 
     // cada indice armazena uma Lista Encadeada (Sprint02ManualLinkedList) chamada de "Bucket" (Balde).
     // Isso resolve colisoes: se dois dados cairem na mesma gaveta, ambos sao enfileirados na lista.
-    private final Sprint02ManualLinkedList<Entry<K, V>>[] buckets;
+    private final ManualLinkedList<Entry<K, V>>[] buckets;
     private int size;
 
     @SuppressWarnings("unchecked")
-    public Sprint06ManualHashTable() {
+    public ManualHashTable() {
         // Inicializa o array de gavetas (buckets). O tamanho deve preferencialmente ser 
         // potencia de 2 (aqui 32) para otimizar operacoes binarias de modulo.
-        buckets = (Sprint02ManualLinkedList<Entry<K, V>>[]) new Sprint02ManualLinkedList[32];
+        buckets = (ManualLinkedList<Entry<K, V>>[]) new ManualLinkedList[32];
     }
 
     public int size() {
@@ -64,7 +67,7 @@ public final class Sprint06ManualHashTable<K, V> {
      */
     public void put(K key, V value) {
         int index = bucketIndex(key);
-        Sprint02ManualLinkedList<Entry<K, V>> bucket = ensureBucket(index);
+        ManualLinkedList<Entry<K, V>> bucket = ensureBucket(index);
         
         // Verifica se a chave ja existe na gaveta para apenas atualizar (Update) o valor.
         for (int i = 0; i < bucket.size(); i++) {
@@ -89,7 +92,7 @@ public final class Sprint06ManualHashTable<K, V> {
      */
     public V get(K key) {
         int index = bucketIndex(key);
-        Sprint02ManualLinkedList<Entry<K, V>> bucket = buckets[index];
+        ManualLinkedList<Entry<K, V>> bucket = buckets[index];
         
         if (bucket == null) {
             return null; // Gaveta completamente vazia
@@ -111,7 +114,7 @@ public final class Sprint06ManualHashTable<K, V> {
      */
     public V remove(K key) {
         int index = bucketIndex(key);
-        Sprint02ManualLinkedList<Entry<K, V>> bucket = buckets[index];
+        ManualLinkedList<Entry<K, V>> bucket = buckets[index];
         
         if (bucket == null) {
             return null;
@@ -119,7 +122,7 @@ public final class Sprint06ManualHashTable<K, V> {
         
         // Em vez de usar remocao complexa na lista, criamos uma nova lista 
         // apenas com os dados que SOBRARAM, ignorando o que o usuario pediu pra remover.
-        Sprint02ManualLinkedList<Entry<K, V>> rebuilt = new Sprint02ManualLinkedList<>();
+        ManualLinkedList<Entry<K, V>> rebuilt = new ManualLinkedList<>();
         V removed = null;
         
         for (int i = 0; i < bucket.size(); i++) {
@@ -155,9 +158,9 @@ public final class Sprint06ManualHashTable<K, V> {
      * Visita todas as entradas da tabela usando o padrao Visitor.
      * Custo: O(n), afinal iterar por TUDO exige passar por N elementos.
      */
-    public void forEach(Sprint10EntryVisitor<K, V> visitor) {
+    public void forEach(EntryVisitor<K, V> visitor) {
         for (int i = 0; i < buckets.length; i++) {
-            Sprint02ManualLinkedList<Entry<K, V>> bucket = buckets[i];
+            ManualLinkedList<Entry<K, V>> bucket = buckets[i];
             if (bucket == null) {
                 continue; // Gaveta vazia, pula.
             }
@@ -173,10 +176,10 @@ public final class Sprint06ManualHashTable<K, V> {
     /**
      * Garante que a gaveta do array ja contem uma LinkedList instanciada.
      */
-    private Sprint02ManualLinkedList<Entry<K, V>> ensureBucket(int index) {
-        Sprint02ManualLinkedList<Entry<K, V>> bucket = buckets[index];
+    private ManualLinkedList<Entry<K, V>> ensureBucket(int index) {
+        ManualLinkedList<Entry<K, V>> bucket = buckets[index];
         if (bucket == null) {
-            bucket = new Sprint02ManualLinkedList<>();
+            bucket = new ManualLinkedList<>();
             buckets[index] = bucket;
         }
         return bucket;

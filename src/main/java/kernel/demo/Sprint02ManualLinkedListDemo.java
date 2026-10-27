@@ -2,10 +2,7 @@ package kernel.demo;
 
 import kernel.sprint.sprint02.ManualLinkedList;
 
-/**
- * Demo de referencia para a Sprint 02 (Sprint02ManualLinkedList).
- * Exemplo generico ensinando o funcionamento basico de uma Lista Encadeada.
- */
+
 public final class Sprint02ManualLinkedListDemo {
     
     private Sprint02ManualLinkedListDemo() {

@@ -1,4 +1,4 @@
-package kernelmjr.manual;
+package kernel.sprint.sprint10;
 
 /**
  * Interface Callback simples para percorrer (visitar) entradas de um mapa/hash.
@@ -8,7 +8,7 @@ package kernelmjr.manual;
  * esta chamando, garantindo o encapsulamento. Quem chama so se preocupa
  * com a Chave e o Valor encontrados.
  */
-public interface Sprint10EntryVisitor<K, V> {
+public interface EntryVisitor<K, V> {
     
     /**
      * Metodo executado automaticamente para cada entrada chave/valor encontrada.

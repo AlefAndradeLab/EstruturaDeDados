@@ -1,7 +1,7 @@
-package kernelmjr.demo;
+package kernel.demo;
 
-import kernelmjr.manual.Sprint10EntryVisitor;
-import kernelmjr.manual.Sprint06ManualHashTable;
+import kernel.sprint.sprint06.ManualHashTable;
+import kernel.sprint.sprint10.EntryVisitor;
 
 /**
  * Demo generica para a Sprint 06 (Sprint06ManualHashTable).
@@ -15,7 +15,7 @@ public final class Sprint06ManualHashTableDemo {
     public static void main(String[] args) {
         
         // Mapeamento: Chave (ID/String) -> Valor (Nome do Produto/String)
-        Sprint06ManualHashTable<String, String> estoque = new Sprint06ManualHashTable<>();
+        ManualHashTable<String, String> estoque = new ManualHashTable<>();
 
         System.out.println("=== EXEMPLO GENERICO - HASH TABLE ===");
         
@@ -41,7 +41,7 @@ public final class Sprint06ManualHashTableDemo {
         System.out.println("SKU-300 removido.");
         System.out.println("Estoque atual:");
         
-        estoque.forEach(new Sprint10EntryVisitor<String, String>() {
+        estoque.forEach(new EntryVisitor<String, String>() {
             @Override
             public void visit(String key, String value) {
                 System.out.printf("  -> [%s]: %s%n", key, value);

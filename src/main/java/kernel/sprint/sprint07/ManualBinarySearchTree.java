@@ -1,4 +1,4 @@
-package kernelmjr.manual;
+package kernel.sprint.sprint07;
 
 /**
  * Arvore Binaria de Busca (BST - Binary Search Tree) manual.
@@ -21,7 +21,7 @@ package kernelmjr.manual;
  * busca binaria, cortando o espaco de busca pela metade a cada passo.
  * Demonstra como a complexidade (Big O) e diretamente ligada a Altura da arvore.
  */
-public final class Sprint07ManualBinarySearchTree {
+public final class ManualBinarySearchTree {
     
     /**
      * O No de uma Arvore Binaria possui ate dois filhos: um a Esquerda e um a Direita.
